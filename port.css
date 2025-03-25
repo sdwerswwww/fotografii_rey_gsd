@@ -1,0 +1,170 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #334868,  #323842);
+    color: #fff;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Логотип */
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Меню */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+    transform: translateY(-5px);
+}
+
+/* Секции */
+.hero, .about, .services, .contact {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.about {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.services {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Заголовки и текст */
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+p {
+    font-size: 1.2em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Стили для десктопов (по умолчанию) */
+body {
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+}
+
+.menu ul {
+    flex-direction: row;
+}
+
+.reviews {
+    justify-content: center;
+}
+
+.review-card {
+    width: 200px;
+}
+
+/* Стили для планшетов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews {
+        justify-content: space-around;
+    }
+
+    .review-card {
+        width: 45%;
+    }
+}
+
+/* Стили для телефонов (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
+    }
+}

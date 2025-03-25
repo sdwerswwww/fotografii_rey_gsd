@@ -1,0 +1,203 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#334868,  #323842); /* Двухцветный фон */
+    color: #fff;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    transform: translateY(-5px);
+    color: #ffcc00;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Прайс-лист */
+.price-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.price-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.price-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.price-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.price-item .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.price-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0; /* Начальная прозрачность для анимации */
+    transform: translateY(20px); /* Начальное смещение для анимации */
+    animation: fadeInUp 0.5s ease forwards; /* Анимация появления */
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .price-item:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .price-item h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .price-item p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+    
+    .price-item .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffcc00;
+    }
+    
+
+    /* Стили для десктопов (по умолчанию) */
+body {
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+}
+
+.menu ul {
+    flex-direction: row;
+}
+
+.reviews {
+    justify-content: center;
+}
+
+.review-card {
+    width: 200px;
+}
+
+/* Стили для планшетов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews {
+        justify-content: space-around;
+    }
+
+    .review-card {
+        width: 45%;
+    }
+}
+
+/* Стили для телефонов (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
+    }
+}
