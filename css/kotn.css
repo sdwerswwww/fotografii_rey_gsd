@@ -1,0 +1,192 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,  #334868,  #323842);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100px;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover img {
+    transform: rotate(360deg);
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contacts h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contacts p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+footer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(135deg,  #334868,  #323842);
+    background-size: 200% 200%;
+    animation: gradientBackground 10s ease infinite;
+}
+
+
+/* Стили для десктопов (по умолчанию) */
+body {
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+}
+
+.menu ul {
+    flex-direction: row;
+}
+
+.reviews {
+    justify-content: center;
+}
+
+.review-card {
+    width: 200px;
+}
+
+/* Стили для планшетов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews {
+        justify-content: space-around;
+    }
+
+    .review-card {
+        width: 45%;
+    }
+}
+
+/* Стили для телефонов (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
+    }
+}
