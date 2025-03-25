@@ -27,16 +27,3 @@ document.getElementById('imageLinkkiin').addEventListener('click', function(even
     window.location.href = "vist.html";
 });
 
-(function () {
-    const devtools = /./;
-    devtools.toString = function () {
-        return 'devtools';
-    };
-    console.log('%c', devtools);
-    setInterval(function () {
-        if (devtools.toString() === 'devtools') {
-            alert('Инструменты разработчика заблокированы!');
-            window.location.reload();
-        }
-    }, 1000);
-})();
